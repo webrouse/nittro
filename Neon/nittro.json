@@ -1,0 +1,8 @@
+{
+    "files": {
+        "js": [
+            "src/Utils/Tokenizer.js",
+            "src/Neon/Neon.js"
+        ]
+    }
+}

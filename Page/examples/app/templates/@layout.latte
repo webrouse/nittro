@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>{$title}</title>
+
+        <link rel="stylesheet" type="text/css" href="/dist/nittro-full.min.css" />
+        <script type="application/javascript">var _stack = [];</script>
+        <script type="application/javascript" src="/dist/nittro-full.min.js" async defer></script>
+    </head>
+    <body>
+        <h1 n:snippet="title">{$title}</h1>
+
+        <nav id="main-nav">
+            <a n:href="Snippets:">Snippets</a>
+            |
+            <a n:href="DynamicSnippets:">Dynamic snippets</a>
+            |
+            <a n:href="DynamicSnippets:sorted">Sorted dynamic snippets</a>
+        </nav>
+
+        <div n:snippet="content" class="nittro-transition-auto nittro-transition-slide">
+            {block content}{/block}
+        </div>
+    </body>
+</html>

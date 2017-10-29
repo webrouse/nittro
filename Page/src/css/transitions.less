@@ -1,0 +1,138 @@
+.nittro-transition-fade {
+    &.nittro-transition-middle {
+        transition: none;
+        opacity: 0;
+    }
+
+    &.nittro-transition-active {
+        transition: opacity .3s;
+    }
+
+    &.nittro-transition-out, &.nittro-transition-middle {
+        opacity: 0;
+    }
+
+    &.nittro-transition-in {
+        opacity: 1;
+    }
+}
+
+.nittro-transition-slide {
+    transform-origin: center top;
+
+    &.nittro-transition-active {
+        transition: opacity 0.3s, transform 0.3s;
+    }
+
+    &.nittro-transition-out {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    &.nittro-transition-middle {
+        transition: none;
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    &.nittro-transition-in {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.nittro-transition-dim {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 9999;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        background: rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        content: '';
+        transform: scale(0, 0);
+    }
+
+    &.nittro-transition-active::before,
+    &.nittro-transition-middle::before {
+        transform: none;
+    }
+
+    &.nittro-transition-out {
+        transition: opacity .3s;
+    }
+
+    &.nittro-transition-out::before {
+        transition: opacity .3s;
+        opacity: 1;
+    }
+
+    &.nittro-transition-middle,
+    &.nittro-transition-middle::before {
+        transition: none;
+        opacity: 1;
+    }
+
+    &.nittro-transition-in {
+        transition: opacity .2s;
+    }
+
+    &.nittro-transition-in::before {
+        transition: opacity .2s;
+        opacity: 0;
+    }
+}
+
+.nittro-transition-bar {
+    &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 3px;
+        background: #900;
+        transform-origin: left center;
+        transform: scaleX(0);
+        opacity: 0;
+        content: '';
+    }
+
+    &.nittro-transition-out {
+        transition: opacity 0.3s;
+    }
+
+    &.nittro-transition-out::before {
+        transition: transform 0.3s;
+        transform: scaleX(0.5);
+        opacity: 1;
+    }
+
+    &.nittro-transition-middle::before {
+        transition: transform 10s;
+        transform: scaleX(0.9);
+        opacity: 1;
+    }
+
+    &.nittro-transition-in {
+        transition: opacity 0.2s;
+    }
+
+    &.nittro-transition-in::before {
+        transition: transform 0.2s, opacity 0.2s step-end;
+        transform: scaleX(1);
+        opacity: 0;
+    }
+}
+
+body .nittro-transition-bar {
+    position: relative;
+}
+
+body.nittro-transition-bar::before {
+    position: fixed;
+}

@@ -1,0 +1,13 @@
+{
+    "files": {
+        "js": [
+            "src/DateInterval.js",
+            "src/DateTime.js",
+            "src/DateTime.i18n.js",
+            "src/DateTime.en.js"
+        ]
+    },
+    "compat": {
+        "es5": true
+    }
+}

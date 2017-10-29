@@ -1,0 +1,42 @@
+{
+    "files": {
+        "js": [
+            "src/js/Snippet.js",
+            "src/js/SnippetManagerHelpers.js",
+            "src/js/SnippetManager.js",
+            "src/js/SnippetAgent.js",
+            "src/js/AjaxAgent.js",
+            "src/js/HistoryAgent.js",
+            "src/js/History.js",
+            "src/js/TransitionAgent.js",
+            "src/js/Transaction.js",
+            "src/js/CspAgent.js",
+            "src/js/GoogleAnalyticsHelper.js",
+            "src/js/Service.js"
+        ],
+        "css": [
+            "src/css/transitions.less"
+        ]
+    },
+    "bridges": {
+        "nittro-di": {
+            "files": [
+                "src/js/Bridges/PageDI/PageExtension.js"
+            ],
+            "extensions": {
+                "page": "Nittro.Page.Bridges.PageDI.PageExtension()"
+            }
+        },
+        "nittro-flashes": {
+            "files": [
+                "src/js/Bridges/PageFlashes/FlashAgent.js"
+            ]
+        }
+    },
+    "compat": {
+        "es5": true,
+        "transitions": true,
+        "transform": true,
+        "historyApi": true
+    }
+}

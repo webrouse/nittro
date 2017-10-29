@@ -1,0 +1,27 @@
+{
+    "files": {
+        "js": [
+            "src/js/Helpers.js",
+            "src/js/Message.js",
+            "src/js/DefaultPositioner.js",
+            "src/js/Service.js"
+        ],
+        "css": [
+            "src/css/flashes.less"
+        ]
+    },
+    "bridges": {
+        "nittro-di": {
+            "files": [
+                "src/js/Bridges/FlashesDI/FlashesExtension.js"
+            ],
+            "extensions": {
+                "flashes": "Nittro.Flashes.Bridges.FlashesDI.FlashesExtension()"
+            }
+        }
+    },
+    "compat": {
+        "es5": true,
+        "flex": true
+    }
+}

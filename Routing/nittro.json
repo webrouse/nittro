@@ -1,0 +1,22 @@
+{
+    "files": {
+        "js": [
+            "src/URLRoute.js",
+            "src/DOMRoute.js",
+            "src/Router.js"
+        ]
+    },
+    "bridges": {
+        "nittro-di": {
+            "files": [
+                "src/Bridges/RoutingDI/RoutingExtension.js"
+            ],
+            "extensions": {
+                "routing": "Nittro.Routing.Bridges.RoutingDI.RoutingExtension()"
+            }
+        }
+    },
+    "compat": {
+        "es5": true
+    }
+}

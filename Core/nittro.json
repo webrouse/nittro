@@ -1,0 +1,21 @@
+{
+    "files": {
+        "js": [
+            "src/context.js",
+            "src/Utils/Strings.js",
+            "src/Utils/Arrays.js",
+            "src/Utils/HashMap.js",
+            "src/Utils/Url.js",
+            "src/Utils/DOM.js",
+            "src/Utils/CSSTransitions.js",
+            "src/Utils/ReflectionClass.js",
+            "src/Utils/ReflectionFunction.js",
+            "src/Nittro/EventEmitter.js",
+            "src/Nittro/Freezable.js",
+            "src/Nittro/Object.js"
+        ]
+    },
+    "compat": {
+        "es5": true
+    }
+}

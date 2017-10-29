@@ -1,0 +1,29 @@
+{
+    "files": {
+        "js": [
+            "src/Vendor.js",
+            "src/FormData.js",
+            "src/Form.js",
+            "src/Locator.js"
+        ]
+    },
+    "bridges": {
+        "nittro-di": {
+            "files": [
+                "src/Bridges/FormsDI/FormsExtension.js"
+            ],
+            "extensions": {
+                "forms": "Nittro.Forms.Bridges.FormsDI.FormsExtension()"
+            }
+        },
+        "nittro-page": {
+            "files": [
+                "src/Bridges/FormsPage/FormsMixin.js"
+            ]
+        }
+    },
+    "compat": {
+        "es5": true,
+        "formData": true
+    }
+}

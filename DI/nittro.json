@@ -1,0 +1,14 @@
+{
+    "files": {
+        "js": [
+            "src/ServiceDefinition.js",
+            "src/ContainerMixin.js",
+            "src/Container.js",
+            "src/BuilderExtension.js",
+            "src/ContainerBuilder.js"
+        ]
+    },
+    "compat": {
+        "es5": true
+    }
+}
